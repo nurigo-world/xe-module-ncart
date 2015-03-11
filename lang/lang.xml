@@ -845,7 +845,7 @@
 		<value xml:lang="ko"><![CDATA[%s 외 %u]]></value>
 		<value xml:lang="en"><![CDATA[%s and %u items]]></value>
 		<value xml:lang="jp"><![CDATA[%s and %u items]]></value>
-		<value xml:lang="zh-TW"><![CDATA[%s 計 %u]]></value>			
+		<value xml:lang="zh-TW"><![CDATA[%s 及其他 %u 項商品]]></value>			
 	</item>
 
 	<item name="cmd_select">
@@ -1070,6 +1070,12 @@
 		<value xml:lang="en"><![CDATA[Please enter your order number and password]]></value>
 		<value xml:lang="jp"><![CDATA[注文番号とパスワードを入力してください。]]></value>
 		<value xml:lang="zh-TW"><![CDATA[請輸入訂單號碼與密碼]]></value>
+	</item>
+	<item name="msg_order_selected_items">
+		<value xml:lang="ko"><![CDATA[선택하신 %u 개 상품만 주문합니다.]]></value>
+		<value xml:lang="en"><![CDATA[%u items which selected will be orered.]]></value>
+		<value xml:lang="jp"><![CDATA[%u items which selected will be orered.]]></value>
+		<value xml:lang="zh-TW"><![CDATA[所選商品有 %u 項]]></value>
 	</item>
 
 	<item name="about_ncart">

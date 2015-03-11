@@ -235,7 +235,7 @@ function progressOrderItems(login_chk) {
 	var cartnos = makeList();
 	if (!cartnos.length) return;
 	if (cartnos.length < g_total_items) {
-		if (!confirm('선택하신 ' + cartnos.length + '개 상품만 주문합니다.')) return;
+		if (!confirm(xe.lang.msg_order_selected_items.replace('%u', cartnos.length))) return;
 	}
 
 	if(login_chk == "Y") location.href = current_url.setQuery('act','dispNcartOrderItems').setQuery('cartnos',cartnos);
