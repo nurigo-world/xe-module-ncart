@@ -45,7 +45,7 @@
 				<td>{$payment_info->vact_name}</td>
 				<td>{$payment_info->vact_inputname}</td>
 				<td cond="0">{$payment_info->vact_regnum}</td>
-				<td><span cond="$payment_info->vact_date">{zdate($payment_info->vact_date,'Y-m-d')}</span><span cond="!$payment_info->vact_date">-</span> 까지</td>
+				<td><span cond="$payment_info->vact_date">{zdate($payment_info->vact_date,'Y-m-d')}</span><span cond="!$payment_info->vact_date">-</span></td>
 				<td cond="0">{$payment_info->vact_time}</td>
 				</block>
 			</tr>
@@ -92,7 +92,7 @@
 				<th>{$lang->item_price}</th>
 				<th>{$lang->discount}</th>
 				<th>{$lang->amount}</th>
-				<th>{$lang->order_status}</th>
+				<th cond="0">{$lang->order_status}</th>
 			</tr>
 		</thead>
 		{@$total_price=0}
@@ -109,7 +109,7 @@
 				<td>{nproductItem::formatMoney($val->discount_amount)}<br />{$val->discount_info}</td>
 				<td>{nproductItem::formatMoney($val->discounted_price)}</td>
 
-				<td>
+				<td cond="0">
 					<span class="ko_text red">{$order_status[$val->order_status]}</span><br />
 					<a cond="in_array($val->order_status,array('3','4'))" href="{$delivery_inquiry_urls[$val->express_id]}{$val->invoice_no}" class="kso_btn" target="_blank"><span>{$lang->cmd_trace_delivery}</span></a>
 				</td>

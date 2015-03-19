@@ -485,30 +485,6 @@ class ncartController extends ncart
 			$purchased_modules[] = $val->module;
 		}
 
-		// call the review process method of the target module
-		foreach($module_list as $key=>$val)
-		{
-			// get the target module's instance
-			$oTargetModule = &getController($val);
-			if($oTargetModule)
-			{
-				if(method_exists($oTargetModule, 'processCartReview'))
-				{
-					// call the target method
-					$output = $oTargetModule->processCartReview($args);
-					if(is_object($output) && method_exists($output, 'toBool') && !$output->toBool()) return $output;
-				}
-				else
-				{
-					debugPrint(sprintf("processCartReview does not exist in %s controller.", $val));
-				}
-			}
-			else
-			{
-				debugPrint(sprintf("%s module controller does not exist.", $val));
-			}
-		}
-
 		$item_count = count($cart->item_list);
 		if (!$item_count) return new Object(-1, 'No items to order');
 
@@ -640,6 +616,30 @@ class ncartController extends ncart
 
 		$output = $this->insertOrder($args, $args->cart);
 		if (!$output->toBool()) return $output;
+
+		// call the review process method of the target module
+		foreach($module_list as $key=>$val)
+		{
+			// get the target module's instance
+			$oTargetModule = &getController($val);
+			if($oTargetModule)
+			{
+				if(method_exists($oTargetModule, 'processCartReview'))
+				{
+					// call the target method
+					$output = $oTargetModule->processCartReview($args);
+					if(is_object($output) && method_exists($output, 'toBool') && !$output->toBool()) return $output;
+				}
+				else
+				{
+					debugPrint(sprintf("processCartReview does not exist in %s controller.", $val));
+				}
+			}
+			else
+			{
+				debugPrint(sprintf("%s module controller does not exist.", $val));
+			}
+		}
 	}
 
 	/**

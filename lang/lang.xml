@@ -635,7 +635,7 @@
 		<value xml:lang="ko"><![CDATA[결제정보입력]]></value>
 		<value xml:lang="en"><![CDATA[Input payment information]]></value>
 		<value xml:lang="jp"><![CDATA[決済情報入力]]></value>
-		<value xml:lang="zh-TW"><![CDATA[輸入付款信息]]></value>
+		<value xml:lang="zh-TW"><![CDATA[選擇付款方式並點擊購買按鈕]]></value>
 	</item>
 	<item name="one_week">
 		<value xml:lang="ko"><![CDATA[1주일]]></value>
@@ -1088,7 +1088,7 @@
 		<value xml:lang="ko"><![CDATA[결제 수단을 선택하신 후 결제하기 버튼을 클릭하세요]]></value>
 		<value xml:lang="en"><![CDATA[Select payment method and click the order button]]></value>
 		<value xml:lang="jp"><![CDATA[お支払い方法を選んで決済ボタンをクリックしてください]]></value>
-		<value xml:lang="zh-TW"><![CDATA[選擇付款方式並點擊訂購按鈕]]></value>				
+		<value xml:lang="zh-TW"><![CDATA[(提醒您，信用卡支付：刷卡成功即自動開通課程，將無法選擇"希望開通課程日期")]]></value>				
 	</item>
 	<item name="about_delivery_fee">
 		<value xml:lang="ko"><![CDATA[배송비를 입력하세요.]]></value>

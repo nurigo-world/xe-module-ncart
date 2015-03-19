@@ -5,8 +5,8 @@
 
 #orderitems .item-table tr td.item_name { padding:20px; text-align:left; color:#6c832c;}
 
-#orderitems h3 { font-size:13px; margin-top:30px; height:28px; color:#666;}
-#orderitems h3 span.title_text { font:normal 11px 'NanumGothic' !important; padding-left:10px; color:#999; }
+#orderitems h3 { font-size:14px; margin-top:30px; height:28px; color:#666;}
+#orderitems h3 span.title_text { font:normal 14px 'NanumGothic' !important; padding-left:10px; color:#de2121; }
 
 #orderitems .order-table input { margin:0; padding:0; height:18px;}
 
