@@ -692,19 +692,17 @@ class ncartModel extends ncart
 		$args->member_srl = $member_srl;
 		$args->cart_srl = $cart_srl;
 		$output = executeQuery('ncart.getPurchasedItem', $args);
-		debugPrint('getPurchasedItem');
-		debugPrint($output);
 		if (!$output->toBool()) return;
 		return $output->data;
 	}
 
-
+	/**
+	 * @brief get fieldset list
+	 */
 	function getFieldSetList($module_srl)
 	{
 		$args->module_srl = $module_srl;
 		$output = executeQueryArray('ncart.getFieldsetList', $args);
-		debugPrint('getFieldsetList');
-		debugPrint($output);
 		if(!$output->toBool()) return $output;
 		$fieldset_list = $output->data;
 

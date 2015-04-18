@@ -23,8 +23,18 @@
 .fieldset table {border-top:1px solid #c4c4c4; width:100%;}
 .fieldset th {border-bottom:1px solid #ededed; color:#666; padding:8px 20px; width:17.6%; text-align:left; background:#f8f8f8; }
 .fieldset td {border-bottom:1px solid #ededed; color:#666; padding:5px 5px 5px 10px; width:82%; overflow:hidden}
-.fieldset .krZip .a input { width:300px; }
+/* for XE 1.7 under versions */
+.fieldset .krZip .a input.current_address,
+.fieldset .krZip .a input.addr3_input,
+.fieldset .krZip .a input.addr_second { width:300px; }
 .fieldset .krZip .a.address2 input { width:200px; }
+/* for XE 1.8 upper versions */
+.fieldset .krZip input.krzip-postcode { width:120px; }
+.fieldset .krZip input.krzip-search { width:80px; margin:0; margin-bottom:3px; }
+.fieldset .krZip input.krzip-roadAddress { width:60%; margin:0; margin-bottom:3px; }
+.fieldset .krZip input.krzip-jibunAddress { width:60%; margin:0; margin-bottom:3px; }
+.fieldset .krZip input.krzip-extraAddress { width:60%; margin:0; margin-bottom:3px; }
+
 .fieldset textarea { width:60%; border:1px solid #ccc; padding:1px; }
 .fieldset input { width:60%; border:1px solid #ccc; padding:3px; margin:3px 0; }
 .fieldset li {float:left; list-style:none;}
