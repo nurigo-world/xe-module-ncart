@@ -3,6 +3,7 @@
 	<grants>
 	</grants>
 	<permissions>
+		<permission action="getNcartAdminOrderDetails" target="manager" />
 	</permissions>
 	<actions>
 		<action name="dispNcartAdminConfig" type="view" />
