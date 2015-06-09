@@ -99,8 +99,8 @@
 		</table>
 	</div>
 
-	<h3 class="title_benefits" cond="$logged_info" >{$lang->purchase_benefit}</h3>
-	<table class="order-table" cond="$logged_info">
+	<h3 class="title_benefits" cond="$mileage_flag != 'N'">{$lang->purchase_benefit}</h3>
+	<table class="order-table" cond="$mileage_flag != 'N'">
 		<tbody>
 			<tr>
 				<th>{$lang->mileage}</th>
@@ -176,8 +176,8 @@
 		<!--// end of fieldset -->
 
 
-		<h3 class="title_mileage" style="display:none"|cond="!$logged_info">{$lang->use_mileage}</h3>
-		<table class="order-table" style="display:none"|cond="!$logged_info">
+		<h3 class="title_mileage" style="display:none"|cond="$mileage_flag == 'N'">{$lang->use_mileage}</h3>
+		<table class="order-table" style="display:none"|cond="$mileage_flag == 'N'">
 			<tbody>
 				<tr>
 					<th>{$lang->use_mileage}</th>
