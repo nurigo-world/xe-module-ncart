@@ -208,8 +208,8 @@ function calculate_payamount(mileage, deliv) {
 			}
 			var orderamount = calculate_totalprice(delivfee_inadvance);
 			var payamount = calculate_payamount(use_mileage,delivfee_inadvance);
-			//$('#order_amount').text(number_format(orderamount));
-			//$('#order_amount2').text(number_format(orderamount));
+			$('#order_amount').text(number_format(orderamount));
+			$('#order_amount2').text(number_format(orderamount));
 			$('#payment_amount').text(number_format(payamount));
 		});
 	});
